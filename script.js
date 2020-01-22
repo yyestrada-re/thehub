@@ -15,14 +15,15 @@ function check(x, y) {
     if(y === 2) {
         if(answer === correctAnswers[1]) {
             document.getElementById('correct2').style.display='inline';
-            document.getElementById('incorrect').style.display='none';
+            document.getElementById('incorrect2').style.display='none';
         }
         else if(answer === correctAnswers[2]) {
             document.getElementById('correct2').style.display='inline';
-            document.getElementById('incorrect').style.display='none';
+            document.getElementById('incorrect2').style.display='none';
         }
         else {
-            document.getElementById('incorrect').style.display='inline';
+            document.getElementById('incorrect2').style.display='inline';
+            document.getElementById('alter2').style.display='inline';
         }
     }
     if(y === 3) {

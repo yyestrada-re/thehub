@@ -37,17 +37,13 @@
                 <input class = "param" type = "text" id = "aAnswer">
                 <input class = "param" type = "submit" onclick= "check('aAnswer', 1)">
             </form>
-            <div id = "correct">
-                <p id = "ca" class = "responses"><i><b>woot woot!</b> you got it right!</i> 🎉</p>
-                <p id = "continued" class = "code" style = "padding-left: 45vw; padding-bottom: 3vw;" onclick = "redirect('b'); hide('cont'); hide('1'); hide('1a');hide('exp1'); hide('alter1'); hide('exp1'); redirect('bform'); hide('continued'); hide('a'); hide('ca'); hide('aform'); hide('correct');";>CONTINUE</p>
-           </div>
 
            <div id = "incorrect">
                 <p class = "responses"><i><b>uh oh.</b> that wasn't quite right. make sure you entered your answer correctly or trace back your steps to see what went wrong</i> 😔<p>
            </div>
 
            <div id = "alter1">
-               <p id = "1" class = "responses" style = "display: inline;">alternatively, 
+               <br><p id = "1" class = "responses" style = "display: inline;">alternatively, 
                    <b style = "display: inline-block;" onclick = "redirect('exp1');">click here</b>
                 for the answer + explanation! (scroll down)</p>
            </div>
@@ -58,15 +54,36 @@
                </p>
            </div>
 
+           <div id = "correct">
+                <p id = "ca" class = "responses"><i><b>woot woot!</b> you got it right!</i> 🎉</p>
+                <p id = "continued" class = "code" style = "padding-left: 45vw; padding-bottom: 3vw;" onclick = "redirect('b'); hide('cont'); hide('1'); hide('1a');hide('exp1'); hide('alter1'); hide('exp1'); redirect('bform'); hide('continued'); hide('a'); hide('ca'); hide('aform'); hide('correct');";>CONTINUE</p>
+           </div>
+
            <p id = "b">(b) what is the <i><b>gravitational force</b></i> acting between the Sun and the Earth? write your answer in E notation.</p>
            <form id = "bform" onsubmit = "return false;">
                 <input class = "param" type = "text" id = "bAnswer">
-                <input class = "param" type = "submit" onclick= "check('bAnswer', 2)">
+                <input id = "button2" class = "param" type = "submit" onclick= "check('bAnswer', 2)">
             </form>
+
+            <div id = "incorrect2">
+                <p class = "responses"><i><b>uh oh.</b> that wasn't quite right. make sure you entered your answer correctly or trace back your steps to see what went wrong</i> 😔<p>
+           </div>
+
+            <div id = "alter2">
+                <p id = "2" class = "responses" style = "display: inline-block;">alternatively, 
+                    <b style = "display: inline-block;" onclick = "redirect('exp2');">click here</b>
+                 for the answer + explanation! (scroll down)</p>
+            </div>
+
+            <div id = "exp2">
+                <p id = "1b" class = "responses">The gravitational force is the force that keeps the Earth traveling in a circle around the Sun. More specifically, ma<sub>c</sub> = (6&times;10<sup>24</sup> kg)(6.0&times;10<sup>-3</sup> <sup>m</sup>&frasl;<sub>s<sup>2</sup></sub>) = 3.6&times;10<sup>22</sup> N or 3.6e+22 N.</p>
+            </div>
+
             <div id = "correct2">
                 <p id = "cb" class = "responses"><i><b>woot woot!</b> you got it right!</i> 🎉</p>
-                <p id = "continued2" class = "code" style = "padding-left: 45vw; padding-top: 3vw; padding-bottom: 3vw;" onclick = "redirect('c'); hide('b'); hide('continued2'); hide('correct2'); redirect('cform'); hide('bform');";>CONTINUE</p>
+                <p id = "continued2" class = "code" style = "padding-left: 45vw; padding-top: 3vw; padding-bottom: 3vw;" onclick = "redirect('c'); hide('b'); hide('continued2'); hide('correct2'); hide('button2'); hide('exp2'); hide('bAnswer'); hide('alter2'); redirect('cform');  hide('bAnswer');";>CONTINUE</p>
             </div>
+
            <p id = "c">(c) what is the <i><b>mass</b></i> of the Sun?</p>
            <form id = "cform" onsubmit = "return false;">
                 <input class = "param" type = "text" id = "cAnswer">

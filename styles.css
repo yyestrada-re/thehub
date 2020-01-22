@@ -83,10 +83,15 @@ b {
     color: #FF0000;
 }
 
-#a, #b, #c {
+#a {
     display: none;
     padding-left: 18vw;
     padding-bottom: 4vw;
+}
+
+#b {
+    display: none;
+    padding-left: 18vw;
 }
 
 .param {
@@ -117,7 +122,7 @@ b {
     padding-bottom: 2vw;
 }
 
-#correct, #incorrect, #correct2, #correct3, #alter1, #exp1 {
+#correct, #incorrect, #correct2, #correct3, #alter1, #alter2, #exp1, #exp2, #incorrect2 {
     display: none;
 }
 
@@ -135,4 +140,10 @@ svg {
 u {
     text-decoration: none;
     border-bottom: 8px solid orange;
+  }
+
+  #c {
+    display: none;
+    padding-left: 0vw;
+    padding-bottom: 4vw;
   }
