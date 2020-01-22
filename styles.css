@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+body {
+    background-image: url(assets/stars.gif);
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,0.4);
+    background-position: center center;
+    margin: 0;
+    z-index: -10; 
+    color: white; 
+}
+
+
+.intro {
+    padding: 2vw 6vw;
+    overflow: hidden;
+}
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12vw;
+    padding-top: 13vw;
+    padding-left: 13vw;
+    display: table-cell;
+    color: white;
+    letter-spacing: 6vw;
+}
+
+.text {
+    display: inline-block;
+    font-family: 'Work Sans';
+    max-width: 55vw;
+    padding-top: 3vw;
+    padding-bottom: 1vw;
+    padding-left: 15vw;
+    text-align: center;
+    line-height: 4vw;
+    font-size: 1.5vw;
+    font-weight: lighter;
+}
+
+.astro {  
+    max-width: 30%;
+    padding: 2vw 25vw;
+    position: absolute;
+    opacity: 0.25;
+}
+
+.astro:hover {
+    filter: invert(80%) sepia(2%) saturate(5272%) hue-rotate(200deg) brightness(99%) contrast(102%);
+}
+
+.code {
+    font-family: 'Source Code Pro';
+    color: green;
+    font-size: 3.4vh;
+    padding-left: 40vw;
+}
+
+.code:hover {
+    color: #FF0000;
+}
+
+#begin{
+    padding-top: 1vw;
+    font-family: 'Work Sans';
+    font-size: 3vh;
+    overflow: hidden;
+    line-height: 6vh;
+    display: none; /*js will change this*/
+}
+
+.format {
+    max-width: 1200px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+b {
+    color: #FF0000;
+}
+
+#a, #b, #c {
+    display: none;
+    padding-left: 18vw;
+    padding-bottom: 4vw;
+}
+
+.param {
+    width: 8vw;
+}
+
+#aform {
+    display: none;
+    margin-left: 3vh;
+}
+
+#bform {
+    display: none;
+    margin-left: 40vh;
+    margin-bottom: 5vw;
+}
+
+#cform {
+    display: none;
+}
+
+.responses {
+    font-family: 'Work Sans';
+    font-size: 3vh;
+    padding-left: 20vw;
+    max-width: 1000px;
+    line-height: 6vh;
+    padding-bottom: 2vw;
+}
+
+#correct, #incorrect, #correct2, #correct3, #alter1, #exp1 {
+    display: none;
+}
+
+svg {
+    display: none;
+    margin-top: 2vw;
+    margin-left: 30vw;
+    margin-right: 20vw;
+}
+
+#alter1 {
+    margin-left: 0vw;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 8px solid orange;
+  }

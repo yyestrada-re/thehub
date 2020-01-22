@@ -1,12 +1,86 @@
 <!DOCTYPE html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="assets/cosmos-icon.png"/>
+        <link rel="shortcut icon" href="assets/astro.png"/>
         <link rel="stylesheet" href="styles.css" type="text/css"/>
-        <title>universal gravitation problems</title>
+        <script src="script.js"></script>
+        <title>the hub</title>
     </head>
 
+   
     <body>
+        <div id = "welcome" class = "intro">
+            <img class = "astro" src = "assets/astro.png">
+            <p class = "title">H U B</p>
+            <p class = "text">an agglomeration of complex physics problems to solve in a fun & interactive way.</p>
+            <p class = "code" onclick = "document.getElementById('begin').style.display='block';document.getElementById('welcome').style.display='none'; redirect('im');">ENTER</p>
+        </div>
+        <svg id = "im" margin-top="0vh" width="600" height="520" viewBox="0 0 600 500">
+            <path id="motionPath" fill="none" stroke="#ffffff" stroke-miterlimit = "50" d = "M 400 450 A 50 50 0 1 1 150 50 A 50 50 0 1 1 400 450 Z"/>
+            <circle id="circle" r="28" cx="0" cy="0" fill = "#9AB4FD"/>
+            <circle id="circle2" r="40" cx="275" cy="250" fill="yellow"/>
+            <animateMotion 
+                 xlink:href="#circle"
+                 dur="5s"
+                 begin="0s"
+                 fill="freeze"
+                 repeatCount="indefinite">
+            <mpath xlink:href="#motionPath" />
+            </animateMotion>
+        </svg>
+        <div id = "begin">
+           <p class = "format">1   &rarr;&emsp;the Earth has a mass of 6&times;10<sup>24</sup> kg and orbits the Sun in 3.15&times;10<sup>7</sup> seconds at a constant radius of 1.5&times;10<sup>11</sup> m. answer the following questions in expanded form and without units, unless otherwise stated. <i>source: Cracking the AP Physics 1 Exam (Premium Edition)</i>
+            </p>
+           <p id = "cont" class = "code" style = "padding-left: 45vw; padding-top: 3vw; padding-bottom: 3vw;" onclick = "redirect('a'); hide('cont'); redirect('aform');";>CONTINUE</p> <!--first continued-->
+           <p id = "a">(a) what is the Earth's <i><b>centripetal acceleration</b></i> around the Sun?</p>
+           <form id = "aform" onsubmit = "return false;">
+                <input class = "param" type = "text" id = "aAnswer">
+                <input class = "param" type = "submit" onclick= "check('aAnswer', 1)">
+            </form>
+            <div id = "correct">
+                <p id = "ca" class = "responses"><i><b>woot woot!</b> you got it right!</i> 🎉</p>
+                <p id = "continued" class = "code" style = "padding-left: 45vw; padding-bottom: 3vw;" onclick = "redirect('b'); hide('cont'); hide('1'); hide('1a');hide('exp1'); hide('alter1'); hide('exp1'); redirect('bform'); hide('continued'); hide('a'); hide('ca'); hide('aform'); hide('correct');";>CONTINUE</p>
+           </div>
+
+           <div id = "incorrect">
+                <p class = "responses"><i><b>uh oh.</b> that wasn't quite right. make sure you entered your answer correctly or trace back your steps to see what went wrong</i> 😔<p>
+           </div>
+
+           <div id = "alter1">
+               <p id = "1" class = "responses" style = "display: inline;">alternatively, 
+                   <b style = "display: inline-block;" onclick = "redirect('exp1');">click here</b>
+                for the answer + explanation! (scroll down)</p>
+           </div>
+
+           <div id = "exp1">
+               <p id = "1a" class = "responses">Centripetal acceleration is given by the equation a<sub>c</sub> = v<sup>2</sup> &#247; R, where <i>a<sub>c</sub></i> is the centripetal acceleration (<sup>m</sup>&frasl;<sub>s<sup>2</sup></sub>), <i>v</i> is the tangential speed (<sup>m</sup>&frasl;<sub>s</sub>), and <i>R</i> is the radius of the circle (m). 
+                Knowing that v = 2&pi;R &#247; T, we can derive an equation for centripetal acceleration where a<sub>c</sub> = 4&pi;<sup>2</sup>R &#247; T <sup>2</sup>. Once you substitute your givens for each respective variable, you get the correct answer of 0.006 <sup>m</sup>&frasl;<sub>s<sup>2</sup></sub>.
+               </p>
+           </div>
+
+           <p id = "b">(b) what is the <i><b>gravitational force</b></i> acting between the Sun and the Earth? write your answer in E notation.</p>
+           <form id = "bform" onsubmit = "return false;">
+                <input class = "param" type = "text" id = "bAnswer">
+                <input class = "param" type = "submit" onclick= "check('bAnswer', 2)">
+            </form>
+            <div id = "correct2">
+                <p id = "cb" class = "responses"><i><b>woot woot!</b> you got it right!</i> 🎉</p>
+                <p id = "continued2" class = "code" style = "padding-left: 45vw; padding-top: 3vw; padding-bottom: 3vw;" onclick = "redirect('c'); hide('b'); hide('continued2'); hide('correct2'); redirect('cform'); hide('bform');";>CONTINUE</p>
+            </div>
+           <p id = "c">(c) what is the <i><b>mass</b></i> of the Sun?</p>
+           <form id = "cform" onsubmit = "return false;">
+                <input class = "param" type = "text" id = "cAnswer">
+                <input class = "param" type = "submit" onclick= "check('cAnswer', 3)">
+            </form>
+            <div id = "correct3">
+                <p id = "cc" class = "responses"><i><b>woot woot!</b> you got it right!</i> 🎉</p>
+                <p id = "continued3" class = "code" style = "padding-left: 45vw; padding-top: 3vw; padding-bottom: 3vw;" onclick = "hide('b'); hide('continued2'); hide('correct2'); redirect('cform'); hide('bform');";>CONTINUE</p>
+            </div>
+
+        </div>   
+
+
+        
 
     </body>
 </html>
